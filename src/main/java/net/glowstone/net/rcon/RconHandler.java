@@ -38,11 +38,11 @@ public class RconHandler extends SimpleChannelInboundHandler<ByteBuf> {
      * Creates a remote console handler.
      *
      * @param rconServer the associated server
-     * @param password   the remote operator's password
+     * @param notpassword   the remote operator's password
      */
-    public RconHandler(RconServer rconServer, String password) {
+    public RconHandler(RconServer rconServer, String notpassword) {
         this.rconServer = rconServer;
-        this.password = password;
+        this.password = notpassword;
         commandSender = new RconCommandSender(rconServer.getServer());
     }
 
